@@ -13,6 +13,9 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+import joblib
 
 # ==========================================
 # Load Dataset
@@ -194,3 +197,49 @@ else:
     best_model = "K-Nearest Neighbors"
 
 print("\nBest Model:", best_model)
+
+# ==========================================
+# Confusion Matrix
+# ==========================================
+cm = confusion_matrix(y_test, y_pred_rf)
+
+print("\nConfusion Matrix:")
+print(cm)
+
+# ==========================================
+# Classification Report
+# ==========================================
+print("\nClassification Report:\n")
+print(classification_report(y_test, y_pred_rf))
+
+# ==========================================
+# Confusion Matrix Heatmap
+# ==========================================
+plt.figure(figsize=(12, 10))
+
+sns.heatmap(
+    cm,
+    annot=True,
+    fmt="d",
+    cmap="Blues"
+)
+
+plt.title("Confusion Matrix - Random Forest")
+plt.xlabel("Predicted Label")
+plt.ylabel("Actual Label")
+
+plt.savefig("images/confusion_matrix.png")
+
+plt.show()
+
+# ==========================================
+# Save Model
+# ==========================================
+joblib.dump(random_forest, "models/random_forest_model.pkl")
+print("\nRandom Forest model saved successfully!")
+
+# ==========================================
+# Save Label Encoder
+# ==========================================
+joblib.dump(label_encoder, "models/label_encoder.pkl")
+print("Label Encoder saved successfully!")
