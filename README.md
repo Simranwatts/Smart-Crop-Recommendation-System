@@ -56,16 +56,23 @@ Number of Crop Classes:
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 The following visualizations were created:
 
-- Crop Distribution
-- Correlation Heatmap
-- Confusion Matrix Heatmap
+## Project Visualizations
 
----
+### Crop Distribution
 
+![Crop Distribution](images/crop_distribution.png)
+
+### Correlation Heatmap
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
 ## 🤖 Machine Learning Models
 
 The following models were implemented and compared:
