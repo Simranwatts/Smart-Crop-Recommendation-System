@@ -60,8 +60,6 @@ Number of Crop Classes:
 
 The following visualizations were created:
 
-## Project Visualizations
-
 ### Crop Distribution
 
 ![Crop Distribution](images/crop_distribution.png)
