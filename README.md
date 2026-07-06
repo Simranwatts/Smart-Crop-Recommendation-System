@@ -141,25 +141,24 @@ Smart-Crop-Recommendation-System/
 
 ## ▶️ How to Run
 
-Clone the repository
+### Clone the repository
 
-```
-git clone <repository-url>
+```bash
+git clone https://github.com/Simranwatts/Smart-Crop-Recommendation-System.git
+cd Smart-Crop-Recommendation-System
 ```
 
-Install required packages
+### Install required packages
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+### Run the application
 
-```
+```bash
 python app.py
 ```
-
-Enter the required values and the model will recommend the most suitable crop.
 
 ---
 
